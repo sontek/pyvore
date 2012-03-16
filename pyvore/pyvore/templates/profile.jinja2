@@ -1,0 +1,16 @@
+{% extends "base.jinja2" %}
+{% block head %}
+{% endblock %}
+{% block content %}
+<div class="row">
+  <div class="content span12">
+    <h1>Profile Information</h1>
+    {% if request.context.pk == request.user.pk %}
+      <a href="{{ request.route_url('edit_profile', user_pk=request.context.pk) }}">Edit Profile</a><br />
+    {% endif %}
+    {{ request.context.first_name }}<br />
+    {{ request.context.last_name }}<br />
+    {{ request.context.email }}<br />
+  </div>
+</div>
+{% endblock %}

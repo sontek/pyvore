@@ -1,0 +1,35 @@
+body {
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+
+.sidebar-nav {
+  padding: 9px 0;
+}
+
+.nav-list li {
+  border-bottom: solid 1px #CCC;
+}
+
+.nav-header {
+  border: 0;
+}
+
+#txtChat {
+  width: 400px;
+}
+/*#chat_message {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+*/
+
+#send {
+  margin-bottom: 9px;
+}
+
+#chat_log {
+  height: 400px;
+  overflow-y: scroll;
+}

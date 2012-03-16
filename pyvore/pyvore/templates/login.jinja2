@@ -1,0 +1,9 @@
+{% extends "base.jinja2" %}
+{% block content %}
+<h1>Login</h1>
+<a href="{{ request.route_url('register') }}">{{ gettext("Register") }}</a> or 
+<a href="{{ request.route_url('forgot_password') }}">{{ gettext("Forgot Password?") }}</a>
+<div class="loginForm">
+    {{ form | safe }}
+</div>
+{% endblock %}
