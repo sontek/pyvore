@@ -23,6 +23,6 @@ pystache
 colander
 pytz
 cryptacular
-deform_jinaj2
+deform_jinja2
 gevent-socketio
 gevent-websocket
