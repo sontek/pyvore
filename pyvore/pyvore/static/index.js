@@ -62,7 +62,7 @@ jQuery(function($) {
         },
 
         render_sessions: function() {
-            if (user_name != undefined) {
+            if (typeof(user_name)!='undefined') {
                 var me = this;
                 var layout = this.use_layout("main_layout", "#container-body");
 
