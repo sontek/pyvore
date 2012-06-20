@@ -1,0 +1,6 @@
+.venv
+*.egg-info
+*.pyc
+*.db
+jst.js
+*.swp
