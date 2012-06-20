@@ -6,7 +6,6 @@ pyramid_beaker
 pyramid_jinja2
 pyramid_tm
 pyramid_debugtoolbar
-pyramid_webassets
 pyramid_socketio
 simplejson
 redis
@@ -26,3 +25,4 @@ cryptacular
 deform_jinja2
 gevent-socketio
 gevent-websocket
+-e git+https://github.com/sontek/pyramid_webassets.git#egg=pyramid_webassets

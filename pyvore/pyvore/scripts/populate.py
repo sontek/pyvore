@@ -59,15 +59,31 @@ def main(argv=sys.argv): # pragma: no cover
     SUEntity.metadata.create_all(engine)
     Entity.metadata.create_all(engine)
 
-    f = open(os.path.join(here, 'pycon.json')).read()
-    data = json.loads(f)
-    for d in data:
-        title = d['title']
-        start = d['start']
-        start = datetime.datetime(start[0], start[1], start[2], start[3])
+#    f = open(os.path.join(here, 'pycon.json')).read()
+#    data = json.loads(f)
+#    for d in data:
+#        title = d['title']
+#        start = d['start']
+#        start = datetime.datetime(start[0], start[1], start[2], start[3])
+#
+#        new_session = Session(title=title, start=start)
+#        session.add(new_session)
 
-        new_session = Session(title=title, start=start)
-        session.add(new_session)
+    with open(os.path.join(here, 'demoday.csv')) as f:
+        raw = f.read()
+        data = raw.split('\n')
+        minute = 0
+        hour = 14
+        for line in data:
+            columns = line.split(',')
+            title = unicode(columns[0].strip(), 'utf-8')
+            start = datetime.datetime(2012, 6, 20, hour, minute)
+            new_session = Session(title=title, start=start)
+            session.add(new_session)
+            minute += 5
+            if minute >= 59:
+                minute = 0
+                hour += 1
 
     username = raw_input("What is your username?: ").decode('utf-8')
     email = raw_input("What is your email?: ").decode('utf-8')
