@@ -9,10 +9,7 @@
 
     <!-- Le styles -->
 
-    {% assets filters="cssmin", output="styles.css",
-      "bootstrap/css/bootstrap.css",
-      "styles.css"
-    %}
+    {% assets filters="cssmin", output="pck_styles.css", "bootstrap/css/bootstrap.css", "styles.css" %}
       <link rel="stylesheet" type="text/css" href="{{ ASSET_URL }}" />
     {% endassets %}
 
